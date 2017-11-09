@@ -31,8 +31,8 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_REUSE_UDENTIDIER];
 
     _viewControllers = @[
-                         @{ TITLE_KEY : @"",
-                            CLASS_NAME : @"",
+                         @{ TITLE_KEY : @"AlertMessage",
+                            CLASS_NAME : @"AlertMessageViewController",
                             },
                          ];
 

@@ -29,6 +29,13 @@
 
 }
 
+
+- (void)showMore:(NSString *)string {
+    if (string) {
+        _textView.text = [_textView.text stringByAppendingString:string];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

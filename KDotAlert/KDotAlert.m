@@ -47,12 +47,20 @@
     };
 }
 
+- (KDotAlertActionBlock)action {
+    return [self defaultAction];
+}
+
 - (KDotAlertActionBlock)defaultAction {
     return ^(NSString * title, void (^ _Nullable hanlder)(UIAlertAction * _Nonnull action)) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:hanlder];
         [_alertController addAction:action];
         return self;
     };
+}
+
+- (KDotAlertActionBlock)cancel {
+    return [self cancelAction];
 }
 
 - (KDotAlertActionBlock)cancelAction {
@@ -64,6 +72,10 @@
         [_alertController addAction:action];
         return self;
     };
+}
+
+- (KDotAlertActionBlock)destructive {
+    return [self destructiveAction];
 }
 
 - (KDotAlertActionBlock)destructiveAction {
@@ -79,6 +91,11 @@
         SAFE_BLOCK(hanlder)(_alertController.actions);
         return self;
     };
+}
+
+// equalto makePreferredAction
+- (KDotAlertMakePreferredActionBlock _Nonnull )preferred {
+    return [self makePreferredAction];
 }
 
 - (KDotAlertMakePreferredActionBlock)makePreferredAction {

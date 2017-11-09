@@ -10,6 +10,7 @@
 		4F2DB5881FB3FB7E00260E46 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DB5871FB3FB7E00260E46 /* MenuViewController.m */; };
 		4F8CB3B21FB40084001D8D4F /* libKDotAlert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8CB3B11FB4007B001D8D4F /* libKDotAlert.a */; };
 		4F8CB3BA1FB43EA0001D8D4F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CB3B91FB43EA0001D8D4F /* BaseViewController.m */; };
+		4FC0247B1FB45026004D6300 /* AlertMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC0247A1FB45026004D6300 /* AlertMessageViewController.m */; };
 		4FE5DDFA1FB3F9D8002EA04B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5DDF91FB3F9D8002EA04B /* AppDelegate.m */; };
 		4FE5DE021FB3F9D8002EA04B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5DE011FB3F9D8002EA04B /* Assets.xcassets */; };
 		4FE5DE051FB3F9D8002EA04B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5DE031FB3F9D8002EA04B /* LaunchScreen.storyboard */; };
@@ -40,6 +41,8 @@
 		4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = KDotAlert.xcodeproj; sourceTree = "<group>"; };
 		4F8CB3B81FB43EA0001D8D4F /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		4F8CB3B91FB43EA0001D8D4F /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4FC024791FB45026004D6300 /* AlertMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertMessageViewController.h; sourceTree = "<group>"; };
+		4FC0247A1FB45026004D6300 /* AlertMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertMessageViewController.m; sourceTree = "<group>"; };
 		4FE5DDF51FB3F9D8002EA04B /* KDotAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDotAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE5DDF81FB3F9D8002EA04B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FE5DDF91FB3F9D8002EA04B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 			children = (
 				4F8CB3B81FB43EA0001D8D4F /* BaseViewController.h */,
 				4F8CB3B91FB43EA0001D8D4F /* BaseViewController.m */,
+				4FC024791FB45026004D6300 /* AlertMessageViewController.h */,
+				4FC0247A1FB45026004D6300 /* AlertMessageViewController.m */,
 			);
 			path = TestViewControllers;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			files = (
 				4FE5DE081FB3F9D8002EA04B /* main.m in Sources */,
 				4F8CB3BA1FB43EA0001D8D4F /* BaseViewController.m in Sources */,
+				4FC0247B1FB45026004D6300 /* AlertMessageViewController.m in Sources */,
 				4F2DB5881FB3FB7E00260E46 /* MenuViewController.m in Sources */,
 				4FE5DDFA1FB3F9D8002EA04B /* AppDelegate.m in Sources */,
 			);

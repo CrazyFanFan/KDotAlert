@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KDotAlert.h"
 
 @interface BaseViewController : UIViewController
 @property (nonatomic, strong) UITextView *textView;
 - (void)showAlertView;
+- (void)showMore:(NSString *)string;
 @end
