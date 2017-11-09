@@ -53,6 +53,7 @@
 
 - (KDotAlertActionBlock)defaultAction {
     return ^(NSString * title, void (^ _Nullable hanlder)(UIAlertAction * _Nonnull action)) {
+        NSAssert(title != nil, @"title cannot be nil.");
         UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:hanlder];
         [_alertController addAction:action];
         return self;
@@ -66,6 +67,7 @@
 - (KDotAlertActionBlock)cancelAction {
     return ^(NSString * title, void (^ _Nullable hanlder)(UIAlertAction * _Nonnull action)) {
         NSAssert(_isAddCancelAction == NO, @"You can only add cancelAction once!");
+        NSAssert(title != nil, @"title cannot be nil.");
         _isAddCancelAction = YES;
         
         UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:hanlder];
@@ -80,6 +82,7 @@
 
 - (KDotAlertActionBlock)destructiveAction {
     return ^(NSString * title, void (^ _Nullable hanlder)(UIAlertAction * _Nonnull action)) {
+        NSAssert(title != nil, @"title cannot be nil.");
         UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDestructive handler:hanlder];
         [_alertController addAction:action];
         return self;
