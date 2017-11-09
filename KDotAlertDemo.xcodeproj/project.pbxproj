@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F2DB5841FB3FA5900260E46 /* libKDotAlert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2DB5851FB3FA5900260E46 /* libKDotAlert.a */; };
 		4F2DB5881FB3FB7E00260E46 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DB5871FB3FB7E00260E46 /* MenuViewController.m */; };
+		4F8CB3B21FB40084001D8D4F /* libKDotAlert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8CB3B11FB4007B001D8D4F /* libKDotAlert.a */; };
 		4FE5DDFA1FB3F9D8002EA04B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5DDF91FB3F9D8002EA04B /* AppDelegate.m */; };
 		4FE5DE021FB3F9D8002EA04B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5DE011FB3F9D8002EA04B /* Assets.xcassets */; };
 		4FE5DE051FB3F9D8002EA04B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5DE031FB3F9D8002EA04B /* LaunchScreen.storyboard */; };
 		4FE5DE081FB3F9D8002EA04B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5DE071FB3F9D8002EA04B /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4F8CB3B01FB4007B001D8D4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4FE5DDE01FB3F960002EA04B;
+			remoteInfo = KDotAlert;
+		};
+		4F8CB3B31FB40088001D8D4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FE5DDDF1FB3F960002EA04B;
+			remoteInfo = KDotAlert;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4F2DB5851FB3FA5900260E46 /* libKDotAlert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKDotAlert.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2DB5861FB3FB7E00260E46 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		4F2DB5871FB3FB7E00260E46 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = KDotAlert.xcodeproj; sourceTree = "<group>"; };
 		4FE5DDF51FB3F9D8002EA04B /* KDotAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDotAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE5DDF81FB3F9D8002EA04B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FE5DDF91FB3F9D8002EA04B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F2DB5841FB3FA5900260E46 /* libKDotAlert.a in Frameworks */,
+				4F8CB3B21FB40084001D8D4F /* libKDotAlert.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,9 +66,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F8CB3AD1FB4007B001D8D4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F8CB3B11FB4007B001D8D4F /* libKDotAlert.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4FE5DDEC1FB3F9D8002EA04B = {
 			isa = PBXGroup;
 			children = (
+				4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */,
 				4FE5DDF71FB3F9D8002EA04B /* KDotAlertDemo */,
 				4FE5DDF61FB3F9D8002EA04B /* Products */,
 				4F2DB5831FB3FA5900260E46 /* Frameworks */,
@@ -94,6 +121,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4F8CB3B41FB40088001D8D4F /* PBXTargetDependency */,
 			);
 			name = KDotAlertDemo;
 			productName = KDotAlertDemo;
@@ -126,12 +154,28 @@
 			mainGroup = 4FE5DDEC1FB3F9D8002EA04B;
 			productRefGroup = 4FE5DDF61FB3F9D8002EA04B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4F8CB3AD1FB4007B001D8D4F /* Products */;
+					ProjectRef = 4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4FE5DDF41FB3F9D8002EA04B /* KDotAlertDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4F8CB3B11FB4007B001D8D4F /* libKDotAlert.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKDotAlert.a;
+			remoteRef = 4F8CB3B01FB4007B001D8D4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4FE5DDF31FB3F9D8002EA04B /* Resources */ = {
@@ -157,6 +201,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F8CB3B41FB40088001D8D4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KDotAlert;
+			targetProxy = 4F8CB3B31FB40088001D8D4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FE5DE031FB3F9D8002EA04B /* LaunchScreen.storyboard */ = {
