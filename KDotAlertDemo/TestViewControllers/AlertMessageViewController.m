@@ -25,12 +25,11 @@
 }
 
 - (void)showAlertView {
-    __weak typeof(self) weakRef = self;
     [KDotAlert alert].title(@"Title").message(@"There is message")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
-        [weakRef showMore:@"OK\n"];
+        [self showMore:@"OK\n"];
     }).show(self, ^{
-        [weakRef showMore:@"Alert is show\n"];
+        [self showMore:@"Alert is show\n"];
     });
 }
 

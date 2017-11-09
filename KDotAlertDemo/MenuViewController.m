@@ -9,12 +9,13 @@
 #import "MenuViewController.h"
 #import "KDotAlert.h"
 
-#define TITLE_KEY @"A"
-#define CLASS_NAME @"B"
+#define TITLEKEY @"A"
+#define SELECTOR @"B"
 static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 
 @interface MenuViewController ()
 @property (nonatomic, strong) NSArray<NSDictionary *> *viewControllers;
+@property (nonatomic, strong) UITextView *textView;
 @end
 
 @implementation MenuViewController
@@ -31,11 +32,21 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_REUSE_UDENTIDIER];
 
     _viewControllers = @[
-                         @{ TITLE_KEY : @"AlertMessage",
-                            CLASS_NAME : @"AlertMessageViewController",
+                         @{ TITLEKEY : @"Alert",
+                            SELECTOR : @"alert",
+                            },
+                         @{ TITLEKEY : @"Cancel",
+                            SELECTOR : @"cancel",
+                            },
+                         @{ TITLEKEY : @"Destructive",
+                            SELECTOR : @"destructive",
                             },
                          ];
-
+    CGRect frame = self.view.bounds;
+    frame.size.height = 100;
+    _textView = [[UITextView alloc] initWithFrame:frame];
+    _textView.backgroundColor = [UIColor lightGrayColor];
+    self.tableView.tableHeaderView = _textView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,18 +65,65 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_REUSE_UDENTIDIER forIndexPath:indexPath];
 
     if (indexPath.row < _viewControllers.count) {
-        cell.textLabel.text = _viewControllers[indexPath.row][TITLE_KEY];
+        cell.textLabel.text = _viewControllers[indexPath.row][TITLEKEY];
     }
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
     if (indexPath.row < _viewControllers.count) {
-        NSString *className = _viewControllers[indexPath.row][CLASS_NAME];
-        [self.navigationController pushViewController:[NSClassFromString(className) new] animated:YES];
+        NSString *selectorName = _viewControllers[indexPath.row][SELECTOR];
+        [self performSelector:NSSelectorFromString(selectorName)];
     }
 }
+
+- (void)showMore:(NSString *)string {
+    if (string) {
+        _textView.text = [_textView.text stringByAppendingFormat:@"%@ : %@",[self currentTimeString], string];
+        [_textView scrollRangeToVisible:NSMakeRange(_textView.text.length, 1)];
+    }
+}
+
+- (NSString *)currentTimeString {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
+    return [dateFormatter stringFromDate:[NSDate date]];
+}
+
+- (void)alert{
+    [KDotAlert alert].title(@"Title").message(@"There is message")
+    .action(@"OK", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"OK\n"];
+    }).show(self, ^{
+        [self showMore:@"Alert is show\n"];
+    });
+}
+
+- (void)cancel {
+    [KDotAlert alert].title(@"Title").message(@"There is message")
+    .action(@"OK", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"OK\n"];
+    }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"Cancel\n"];
+    }).show(self, ^{
+        [self showMore:@"Alert is show\n"];
+    });
+}
+- (void)destructive {
+    [KDotAlert alert].title(@"Title").message(@"There is message")
+    .action(@"OK", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"OK\n"];
+    }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"Cancel\n"];
+    }).destructive(@"Destructive", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"Destructive\n"];
+    }).show(self, ^{
+        [self showMore:@"Alert is show\n"];
+    });
+}
+
 
 /*
  // Override to support conditional editing of the table view.

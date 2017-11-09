@@ -133,6 +133,8 @@
     };
 }
 
-
+- (void)dealloc {
+    NSLog(@"KDotAlert.dealloc");
+}
 
 @end
