@@ -7,10 +7,19 @@
 //
 
 #import "MenuViewController.h"
-#import "KDotAlert.h"
+#import <KDotAlert/KDotAlert.h>
 
 #define TITLEKEY @"A"
 #define SELECTOR @"B"
+
+#define SuppressPerformSelectorLeakWarning(Stuff) \
+do { \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+    Stuff; \
+    _Pragma("clang diagnostic pop") \
+} while (0)
+
 static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 
 @interface MenuViewController ()
@@ -75,7 +84,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 
     if (indexPath.row < _viewControllers.count) {
         NSString *selectorName = _viewControllers[indexPath.row][SELECTOR];
-        [self performSelector:NSSelectorFromString(selectorName)];
+        SuppressPerformSelectorLeakWarning( [self performSelector:NSSelectorFromString(selectorName)];);
     }
 }
 
@@ -111,6 +120,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
         [self showMore:@"Alert is show\n"];
     });
 }
+
 - (void)destructive {
     [KDotAlert alert].title(@"Title").message(@"There is message")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {

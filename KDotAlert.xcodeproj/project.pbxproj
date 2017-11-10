@@ -7,31 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FE5DDE51FB3F960002EA04B /* KDotAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5DDE41FB3F960002EA04B /* KDotAlert.m */; };
-		4FE5DDE61FB3F960002EA04B /* KDotAlert.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4FE5DDE31FB3F960002EA04B /* KDotAlert.h */; };
+		4F32E37F1FB577D4004C5076 /* KDotAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E37E1FB577D3004C5076 /* KDotAlert.m */; };
+		4F870ED91FB576790010FE1D /* KDotAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F870ED71FB576790010FE1D /* KDotAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4FE5DDDE1FB3F960002EA04B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				4FE5DDE61FB3F960002EA04B /* KDotAlert.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		4FE5DDE01FB3F960002EA04B /* libKDotAlert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKDotAlert.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FE5DDE31FB3F960002EA04B /* KDotAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KDotAlert.h; sourceTree = "<group>"; };
-		4FE5DDE41FB3F960002EA04B /* KDotAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KDotAlert.m; sourceTree = "<group>"; };
+		4F32E37E1FB577D3004C5076 /* KDotAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDotAlert.m; sourceTree = "<group>"; };
+		4F870ED41FB576790010FE1D /* KDotAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KDotAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F870ED71FB576790010FE1D /* KDotAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KDotAlert.h; sourceTree = "<group>"; };
+		4F870ED81FB576790010FE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4FE5DDDD1FB3F960002EA04B /* Frameworks */ = {
+		4F870ED01FB576790010FE1D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,41 +29,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4FE5DDD71FB3F960002EA04B = {
+		4F870ECA1FB576790010FE1D = {
 			isa = PBXGroup;
 			children = (
-				4FE5DDE21FB3F960002EA04B /* KDotAlert */,
-				4FE5DDE11FB3F960002EA04B /* Products */,
+				4F870ED61FB576790010FE1D /* KDotAlert */,
+				4F870ED51FB576790010FE1D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4FE5DDE11FB3F960002EA04B /* Products */ = {
+		4F870ED51FB576790010FE1D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4FE5DDE01FB3F960002EA04B /* libKDotAlert.a */,
+				4F870ED41FB576790010FE1D /* KDotAlert.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4FE5DDE21FB3F960002EA04B /* KDotAlert */ = {
+		4F870ED61FB576790010FE1D /* KDotAlert */ = {
 			isa = PBXGroup;
 			children = (
-				4FE5DDE31FB3F960002EA04B /* KDotAlert.h */,
-				4FE5DDE41FB3F960002EA04B /* KDotAlert.m */,
+				4F870ED71FB576790010FE1D /* KDotAlert.h */,
+				4F32E37E1FB577D3004C5076 /* KDotAlert.m */,
+				4F870ED81FB576790010FE1D /* Info.plist */,
 			);
 			path = KDotAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4F870ED11FB576790010FE1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F870ED91FB576790010FE1D /* KDotAlert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		4FE5DDDF1FB3F960002EA04B /* KDotAlert */ = {
+		4F870ED31FB576790010FE1D /* KDotAlert */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FE5DDE91FB3F960002EA04B /* Build configuration list for PBXNativeTarget "KDotAlert" */;
+			buildConfigurationList = 4F870EDC1FB576790010FE1D /* Build configuration list for PBXNativeTarget "KDotAlert" */;
 			buildPhases = (
-				4FE5DDDC1FB3F960002EA04B /* Sources */,
-				4FE5DDDD1FB3F960002EA04B /* Frameworks */,
-				4FE5DDDE1FB3F960002EA04B /* CopyFiles */,
+				4F870ECF1FB576790010FE1D /* Sources */,
+				4F870ED01FB576790010FE1D /* Frameworks */,
+				4F870ED11FB576790010FE1D /* Headers */,
+				4F870ED21FB576790010FE1D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -83,54 +84,64 @@
 			);
 			name = KDotAlert;
 			productName = KDotAlert;
-			productReference = 4FE5DDE01FB3F960002EA04B /* libKDotAlert.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 4F870ED41FB576790010FE1D /* KDotAlert.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4FE5DDD81FB3F960002EA04B /* Project object */ = {
+		4F870ECB1FB576790010FE1D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Crazy凡";
 				TargetAttributes = {
-					4FE5DDDF1FB3F960002EA04B = {
+					4F870ED31FB576790010FE1D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 4FE5DDDB1FB3F960002EA04B /* Build configuration list for PBXProject "KDotAlert" */;
+			buildConfigurationList = 4F870ECE1FB576790010FE1D /* Build configuration list for PBXProject "KDotAlert" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4FE5DDD71FB3F960002EA04B;
-			productRefGroup = 4FE5DDE11FB3F960002EA04B /* Products */;
+			mainGroup = 4F870ECA1FB576790010FE1D;
+			productRefGroup = 4F870ED51FB576790010FE1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4FE5DDDF1FB3F960002EA04B /* KDotAlert */,
+				4F870ED31FB576790010FE1D /* KDotAlert */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		4F870ED21FB576790010FE1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		4FE5DDDC1FB3F960002EA04B /* Sources */ = {
+		4F870ECF1FB576790010FE1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE5DDE51FB3F960002EA04B /* KDotAlert.m in Sources */,
+				4F32E37F1FB577D4004C5076 /* KDotAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4FE5DDE71FB3F960002EA04B /* Debug */ = {
+		4F870EDA1FB576790010FE1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -161,6 +172,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -178,14 +190,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		4FE5DDE81FB3F960002EA04B /* Release */ = {
+		4F870EDB1FB576790010FE1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,6 +230,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -227,32 +242,54 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		4FE5DDEA1FB3F960002EA04B /* Debug */ = {
+		4F870EDD1FB576790010FE1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FAH45WPA2T;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KDotAlert/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazyfan.KDotAlert;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4FE5DDEB1FB3F960002EA04B /* Release */ = {
+		4F870EDE1FB576790010FE1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FAH45WPA2T;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KDotAlert/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazyfan.KDotAlert;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -261,25 +298,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4FE5DDDB1FB3F960002EA04B /* Build configuration list for PBXProject "KDotAlert" */ = {
+		4F870ECE1FB576790010FE1D /* Build configuration list for PBXProject "KDotAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FE5DDE71FB3F960002EA04B /* Debug */,
-				4FE5DDE81FB3F960002EA04B /* Release */,
+				4F870EDA1FB576790010FE1D /* Debug */,
+				4F870EDB1FB576790010FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FE5DDE91FB3F960002EA04B /* Build configuration list for PBXNativeTarget "KDotAlert" */ = {
+		4F870EDC1FB576790010FE1D /* Build configuration list for PBXNativeTarget "KDotAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FE5DDEA1FB3F960002EA04B /* Debug */,
-				4FE5DDEB1FB3F960002EA04B /* Release */,
+				4F870EDD1FB576790010FE1D /* Debug */,
+				4F870EDE1FB576790010FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4FE5DDD81FB3F960002EA04B /* Project object */;
+	rootObject = 4F870ECB1FB576790010FE1D /* Project object */;
 }

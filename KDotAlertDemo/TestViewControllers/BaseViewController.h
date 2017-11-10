@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KDotAlert.h"
+#import <KDotAlert/KDotAlert.h>
 
 @interface BaseViewController : UIViewController
 @property (nonatomic, strong) UITextView *textView;

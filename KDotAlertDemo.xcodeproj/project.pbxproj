@@ -7,161 +7,159 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F2DB5881FB3FB7E00260E46 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DB5871FB3FB7E00260E46 /* MenuViewController.m */; };
-		4F8CB3B21FB40084001D8D4F /* libKDotAlert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8CB3B11FB4007B001D8D4F /* libKDotAlert.a */; };
-		4F8CB3BA1FB43EA0001D8D4F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CB3B91FB43EA0001D8D4F /* BaseViewController.m */; };
-		4FC0247B1FB45026004D6300 /* AlertMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC0247A1FB45026004D6300 /* AlertMessageViewController.m */; };
-		4FE5DDFA1FB3F9D8002EA04B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5DDF91FB3F9D8002EA04B /* AppDelegate.m */; };
-		4FE5DE021FB3F9D8002EA04B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5DE011FB3F9D8002EA04B /* Assets.xcassets */; };
-		4FE5DE051FB3F9D8002EA04B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5DE031FB3F9D8002EA04B /* LaunchScreen.storyboard */; };
-		4FE5DE081FB3F9D8002EA04B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5DE071FB3F9D8002EA04B /* main.m */; };
+		4F32E37B1FB5779B004C5076 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E3751FB5779B004C5076 /* MenuViewController.m */; };
+		4F32E37C1FB5779B004C5076 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E3771FB5779B004C5076 /* BaseViewController.m */; };
+		4F32E37D1FB5779B004C5076 /* AlertMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E37A1FB5779B004C5076 /* AlertMessageViewController.m */; };
+		4F32E3811FB577F9004C5076 /* KDotAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F870F061FB576CC0010FE1D /* KDotAlert.framework */; };
+		4F870EED1FB576980010FE1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F870EEC1FB576980010FE1D /* AppDelegate.m */; };
+		4F870EF51FB576980010FE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F870EF41FB576980010FE1D /* Assets.xcassets */; };
+		4F870EF81FB576980010FE1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F870EF61FB576980010FE1D /* LaunchScreen.storyboard */; };
+		4F870EFB1FB576980010FE1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F870EFA1FB576980010FE1D /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4F8CB3B01FB4007B001D8D4F /* PBXContainerItemProxy */ = {
+		4F32E3821FB577FE004C5076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4FE5DDE01FB3F960002EA04B;
+			containerPortal = 4F870F011FB576CC0010FE1D /* KDotAlert.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F870ED31FB576790010FE1D;
 			remoteInfo = KDotAlert;
 		};
-		4F8CB3B31FB40088001D8D4F /* PBXContainerItemProxy */ = {
+		4F870F051FB576CC0010FE1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4FE5DDDF1FB3F960002EA04B;
+			containerPortal = 4F870F011FB576CC0010FE1D /* KDotAlert.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F870ED41FB576790010FE1D;
 			remoteInfo = KDotAlert;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F2DB5851FB3FA5900260E46 /* libKDotAlert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKDotAlert.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F2DB5861FB3FB7E00260E46 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		4F2DB5871FB3FB7E00260E46 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = KDotAlert.xcodeproj; sourceTree = "<group>"; };
-		4F8CB3B81FB43EA0001D8D4F /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		4F8CB3B91FB43EA0001D8D4F /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		4FC024791FB45026004D6300 /* AlertMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertMessageViewController.h; sourceTree = "<group>"; };
-		4FC0247A1FB45026004D6300 /* AlertMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertMessageViewController.m; sourceTree = "<group>"; };
-		4FE5DDF51FB3F9D8002EA04B /* KDotAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDotAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FE5DDF81FB3F9D8002EA04B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4FE5DDF91FB3F9D8002EA04B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4FE5DE011FB3F9D8002EA04B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4FE5DE041FB3F9D8002EA04B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4FE5DE061FB3F9D8002EA04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FE5DE071FB3F9D8002EA04B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F32E3731FB5779B004C5076 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		4F32E3751FB5779B004C5076 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		4F32E3771FB5779B004C5076 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4F32E3781FB5779B004C5076 /* AlertMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertMessageViewController.h; sourceTree = "<group>"; };
+		4F32E3791FB5779B004C5076 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4F32E37A1FB5779B004C5076 /* AlertMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertMessageViewController.m; sourceTree = "<group>"; };
+		4F870EE81FB576980010FE1D /* KDotAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDotAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F870EEB1FB576980010FE1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F870EEC1FB576980010FE1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F870EF41FB576980010FE1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F870EF71FB576980010FE1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F870EF91FB576980010FE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F870EFA1FB576980010FE1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F870F011FB576CC0010FE1D /* KDotAlert.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = KDotAlert.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4FE5DDF21FB3F9D8002EA04B /* Frameworks */ = {
+		4F870EE51FB576980010FE1D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8CB3B21FB40084001D8D4F /* libKDotAlert.a in Frameworks */,
+				4F32E3811FB577F9004C5076 /* KDotAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F2DB5831FB3FA5900260E46 /* Frameworks */ = {
+		4F32E3761FB5779B004C5076 /* TestViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4F2DB5851FB3FA5900260E46 /* libKDotAlert.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4F8CB3AD1FB4007B001D8D4F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4F8CB3B11FB4007B001D8D4F /* libKDotAlert.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4F8CB3B71FB43E79001D8D4F /* TestViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4F8CB3B81FB43EA0001D8D4F /* BaseViewController.h */,
-				4F8CB3B91FB43EA0001D8D4F /* BaseViewController.m */,
-				4FC024791FB45026004D6300 /* AlertMessageViewController.h */,
-				4FC0247A1FB45026004D6300 /* AlertMessageViewController.m */,
+				4F32E3791FB5779B004C5076 /* BaseViewController.h */,
+				4F32E3771FB5779B004C5076 /* BaseViewController.m */,
+				4F32E3781FB5779B004C5076 /* AlertMessageViewController.h */,
+				4F32E37A1FB5779B004C5076 /* AlertMessageViewController.m */,
 			);
 			path = TestViewControllers;
 			sourceTree = "<group>";
 		};
-		4FE5DDEC1FB3F9D8002EA04B = {
+		4F32E3801FB577F9004C5076 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */,
-				4FE5DDF71FB3F9D8002EA04B /* KDotAlertDemo */,
-				4FE5DDF61FB3F9D8002EA04B /* Products */,
-				4F2DB5831FB3FA5900260E46 /* Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F870EDF1FB576980010FE1D = {
+			isa = PBXGroup;
+			children = (
+				4F870F011FB576CC0010FE1D /* KDotAlert.xcodeproj */,
+				4F870EEA1FB576980010FE1D /* KDotAlertDemo */,
+				4F870EE91FB576980010FE1D /* Products */,
+				4F32E3801FB577F9004C5076 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		4FE5DDF61FB3F9D8002EA04B /* Products */ = {
+		4F870EE91FB576980010FE1D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4FE5DDF51FB3F9D8002EA04B /* KDotAlertDemo.app */,
+				4F870EE81FB576980010FE1D /* KDotAlertDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4FE5DDF71FB3F9D8002EA04B /* KDotAlertDemo */ = {
+		4F870EEA1FB576980010FE1D /* KDotAlertDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4F8CB3B71FB43E79001D8D4F /* TestViewControllers */,
-				4FE5DDF81FB3F9D8002EA04B /* AppDelegate.h */,
-				4FE5DDF91FB3F9D8002EA04B /* AppDelegate.m */,
-				4F2DB5861FB3FB7E00260E46 /* MenuViewController.h */,
-				4F2DB5871FB3FB7E00260E46 /* MenuViewController.m */,
-				4FE5DE011FB3F9D8002EA04B /* Assets.xcassets */,
-				4FE5DE031FB3F9D8002EA04B /* LaunchScreen.storyboard */,
-				4FE5DE061FB3F9D8002EA04B /* Info.plist */,
-				4FE5DE071FB3F9D8002EA04B /* main.m */,
+				4F32E3761FB5779B004C5076 /* TestViewControllers */,
+				4F32E3731FB5779B004C5076 /* MenuViewController.h */,
+				4F32E3751FB5779B004C5076 /* MenuViewController.m */,
+				4F870EEB1FB576980010FE1D /* AppDelegate.h */,
+				4F870EEC1FB576980010FE1D /* AppDelegate.m */,
+				4F870EF41FB576980010FE1D /* Assets.xcassets */,
+				4F870EF61FB576980010FE1D /* LaunchScreen.storyboard */,
+				4F870EF91FB576980010FE1D /* Info.plist */,
+				4F870EFA1FB576980010FE1D /* main.m */,
 			);
 			path = KDotAlertDemo;
+			sourceTree = "<group>";
+		};
+		4F870F021FB576CC0010FE1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F870F061FB576CC0010FE1D /* KDotAlert.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4FE5DDF41FB3F9D8002EA04B /* KDotAlertDemo */ = {
+		4F870EE71FB576980010FE1D /* KDotAlertDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FE5DE0B1FB3F9D8002EA04B /* Build configuration list for PBXNativeTarget "KDotAlertDemo" */;
+			buildConfigurationList = 4F870EFE1FB576980010FE1D /* Build configuration list for PBXNativeTarget "KDotAlertDemo" */;
 			buildPhases = (
-				4FE5DDF11FB3F9D8002EA04B /* Sources */,
-				4FE5DDF21FB3F9D8002EA04B /* Frameworks */,
-				4FE5DDF31FB3F9D8002EA04B /* Resources */,
+				4F870EE41FB576980010FE1D /* Sources */,
+				4F870EE51FB576980010FE1D /* Frameworks */,
+				4F870EE61FB576980010FE1D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4F8CB3B41FB40088001D8D4F /* PBXTargetDependency */,
+				4F32E3831FB577FE004C5076 /* PBXTargetDependency */,
 			);
 			name = KDotAlertDemo;
 			productName = KDotAlertDemo;
-			productReference = 4FE5DDF51FB3F9D8002EA04B /* KDotAlertDemo.app */;
+			productReference = 4F870EE81FB576980010FE1D /* KDotAlertDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4FE5DDED1FB3F9D8002EA04B /* Project object */ = {
+		4F870EE01FB576980010FE1D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Crazy凡";
 				TargetAttributes = {
-					4FE5DDF41FB3F9D8002EA04B = {
+					4F870EE71FB576980010FE1D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 4FE5DDF01FB3F9D8002EA04B /* Build configuration list for PBXProject "KDotAlertDemo" */;
+			buildConfigurationList = 4F870EE31FB576980010FE1D /* Build configuration list for PBXProject "KDotAlertDemo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,72 +167,72 @@
 				en,
 				Base,
 			);
-			mainGroup = 4FE5DDEC1FB3F9D8002EA04B;
-			productRefGroup = 4FE5DDF61FB3F9D8002EA04B /* Products */;
+			mainGroup = 4F870EDF1FB576980010FE1D;
+			productRefGroup = 4F870EE91FB576980010FE1D /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 4F8CB3AD1FB4007B001D8D4F /* Products */;
-					ProjectRef = 4F8CB3AC1FB4007B001D8D4F /* KDotAlert.xcodeproj */;
+					ProductGroup = 4F870F021FB576CC0010FE1D /* Products */;
+					ProjectRef = 4F870F011FB576CC0010FE1D /* KDotAlert.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				4FE5DDF41FB3F9D8002EA04B /* KDotAlertDemo */,
+				4F870EE71FB576980010FE1D /* KDotAlertDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4F8CB3B11FB4007B001D8D4F /* libKDotAlert.a */ = {
+		4F870F061FB576CC0010FE1D /* KDotAlert.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKDotAlert.a;
-			remoteRef = 4F8CB3B01FB4007B001D8D4F /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = KDotAlert.framework;
+			remoteRef = 4F870F051FB576CC0010FE1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4FE5DDF31FB3F9D8002EA04B /* Resources */ = {
+		4F870EE61FB576980010FE1D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE5DE051FB3F9D8002EA04B /* LaunchScreen.storyboard in Resources */,
-				4FE5DE021FB3F9D8002EA04B /* Assets.xcassets in Resources */,
+				4F870EF81FB576980010FE1D /* LaunchScreen.storyboard in Resources */,
+				4F870EF51FB576980010FE1D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4FE5DDF11FB3F9D8002EA04B /* Sources */ = {
+		4F870EE41FB576980010FE1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE5DE081FB3F9D8002EA04B /* main.m in Sources */,
-				4F8CB3BA1FB43EA0001D8D4F /* BaseViewController.m in Sources */,
-				4FC0247B1FB45026004D6300 /* AlertMessageViewController.m in Sources */,
-				4F2DB5881FB3FB7E00260E46 /* MenuViewController.m in Sources */,
-				4FE5DDFA1FB3F9D8002EA04B /* AppDelegate.m in Sources */,
+				4F870EFB1FB576980010FE1D /* main.m in Sources */,
+				4F32E37C1FB5779B004C5076 /* BaseViewController.m in Sources */,
+				4F32E37D1FB5779B004C5076 /* AlertMessageViewController.m in Sources */,
+				4F32E37B1FB5779B004C5076 /* MenuViewController.m in Sources */,
+				4F870EED1FB576980010FE1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4F8CB3B41FB40088001D8D4F /* PBXTargetDependency */ = {
+		4F32E3831FB577FE004C5076 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KDotAlert;
-			targetProxy = 4F8CB3B31FB40088001D8D4F /* PBXContainerItemProxy */;
+			targetProxy = 4F32E3821FB577FE004C5076 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4FE5DE031FB3F9D8002EA04B /* LaunchScreen.storyboard */ = {
+		4F870EF61FB576980010FE1D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4FE5DE041FB3F9D8002EA04B /* Base */,
+				4F870EF71FB576980010FE1D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -242,7 +240,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4FE5DE091FB3F9D8002EA04B /* Debug */ = {
+		4F870EFC1FB576980010FE1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +295,7 @@
 			};
 			name = Debug;
 		};
-		4FE5DE0A1FB3F9D8002EA04B /* Release */ = {
+		4F870EFD1FB576980010FE1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -346,35 +344,31 @@
 			};
 			name = Release;
 		};
-		4FE5DE0C1FB3F9D8002EA04B /* Debug */ = {
+		4F870EFF1FB576980010FE1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAH45WPA2T;
-				HEADER_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/include/**";
 				INFOPLIST_FILE = KDotAlertDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazyfan.KDotAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazyfan.KDotAlertDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4FE5DE0D1FB3F9D8002EA04B /* Release */ = {
+		4F870F001FB576980010FE1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAH45WPA2T;
-				HEADER_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/include/**";
 				INFOPLIST_FILE = KDotAlertDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazyfan.KDotAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazyfan.KDotAlertDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,25 +377,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4FE5DDF01FB3F9D8002EA04B /* Build configuration list for PBXProject "KDotAlertDemo" */ = {
+		4F870EE31FB576980010FE1D /* Build configuration list for PBXProject "KDotAlertDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FE5DE091FB3F9D8002EA04B /* Debug */,
-				4FE5DE0A1FB3F9D8002EA04B /* Release */,
+				4F870EFC1FB576980010FE1D /* Debug */,
+				4F870EFD1FB576980010FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FE5DE0B1FB3F9D8002EA04B /* Build configuration list for PBXNativeTarget "KDotAlertDemo" */ = {
+		4F870EFE1FB576980010FE1D /* Build configuration list for PBXNativeTarget "KDotAlertDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FE5DE0C1FB3F9D8002EA04B /* Debug */,
-				4FE5DE0D1FB3F9D8002EA04B /* Release */,
+				4F870EFF1FB576980010FE1D /* Debug */,
+				4F870F001FB576980010FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4FE5DDED1FB3F9D8002EA04B /* Project object */;
+	rootObject = 4F870EE01FB576980010FE1D /* Project object */;
 }

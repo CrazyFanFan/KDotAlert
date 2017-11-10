@@ -2,11 +2,20 @@
 //  KDotAlert.h
 //  KDotAlert
 //
-//  Created by Crazy凡 on 09/11/2017.
+//  Created by Crazy凡 on 10/11/2017.
 //  Copyright © 2017 Crazy凡. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+
+//! Project version number for KDotAlert.
+FOUNDATION_EXPORT double KDotAlertVersionNumber;
+
+//! Project version string for KDotAlert.
+FOUNDATION_EXPORT const unsigned char KDotAlertVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <KDotAlert/PublicHeader.h>
+
 
 @class KDotAlert;
 
