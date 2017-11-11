@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F32E37B1FB5779B004C5076 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E3751FB5779B004C5076 /* MenuViewController.m */; };
-		4F32E37C1FB5779B004C5076 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E3771FB5779B004C5076 /* BaseViewController.m */; };
-		4F32E37D1FB5779B004C5076 /* AlertMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E37A1FB5779B004C5076 /* AlertMessageViewController.m */; };
 		4F32E3811FB577F9004C5076 /* KDotAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F870F061FB576CC0010FE1D /* KDotAlert.framework */; };
 		4F870EED1FB576980010FE1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F870EEC1FB576980010FE1D /* AppDelegate.m */; };
 		4F870EF51FB576980010FE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F870EF41FB576980010FE1D /* Assets.xcassets */; };
@@ -37,10 +35,6 @@
 /* Begin PBXFileReference section */
 		4F32E3731FB5779B004C5076 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		4F32E3751FB5779B004C5076 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		4F32E3771FB5779B004C5076 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		4F32E3781FB5779B004C5076 /* AlertMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertMessageViewController.h; sourceTree = "<group>"; };
-		4F32E3791FB5779B004C5076 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		4F32E37A1FB5779B004C5076 /* AlertMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertMessageViewController.m; sourceTree = "<group>"; };
 		4F870EE81FB576980010FE1D /* KDotAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDotAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F870EEB1FB576980010FE1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F870EEC1FB576980010FE1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,17 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F32E3761FB5779B004C5076 /* TestViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4F32E3791FB5779B004C5076 /* BaseViewController.h */,
-				4F32E3771FB5779B004C5076 /* BaseViewController.m */,
-				4F32E3781FB5779B004C5076 /* AlertMessageViewController.h */,
-				4F32E37A1FB5779B004C5076 /* AlertMessageViewController.m */,
-			);
-			path = TestViewControllers;
-			sourceTree = "<group>";
-		};
 		4F32E3801FB577F9004C5076 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +85,6 @@
 		4F870EEA1FB576980010FE1D /* KDotAlertDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4F32E3761FB5779B004C5076 /* TestViewControllers */,
 				4F32E3731FB5779B004C5076 /* MenuViewController.h */,
 				4F32E3751FB5779B004C5076 /* MenuViewController.m */,
 				4F870EEB1FB576980010FE1D /* AppDelegate.h */,
@@ -211,8 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F870EFB1FB576980010FE1D /* main.m in Sources */,
-				4F32E37C1FB5779B004C5076 /* BaseViewController.m in Sources */,
-				4F32E37D1FB5779B004C5076 /* AlertMessageViewController.m in Sources */,
 				4F32E37B1FB5779B004C5076 /* MenuViewController.m in Sources */,
 				4F870EED1FB576980010FE1D /* AppDelegate.m in Sources */,
 			);

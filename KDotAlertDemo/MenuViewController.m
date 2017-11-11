@@ -114,7 +114,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)alert{
-    [KDotAlert alert].format(@"Alert", @"This is Alert")
+    [KDotAlert alert].format(@"Alert", @"There is Alert")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK"];
     }).show(self, ^{
@@ -123,7 +123,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)cancel {
-    [KDotAlert alert].format(@"Cancel", @"This is Cancel")
+    [KDotAlert alert].format(@"Cancel", @"There is Cancel")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK"];
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
@@ -134,7 +134,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)destructive {
-    [KDotAlert alert].format(@"Destructive", @"This is Destructive")
+    [KDotAlert alert].format(@"Destructive", @"There is Destructive")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK"];
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
@@ -149,7 +149,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 - (void)texFeiled {
     __block KDotAlert *alert = [KDotAlert alert];
 
-    alert.format(@"TextField", @"This is TextField")
+    alert.format(@"TextField", @"There is TextField")
     .textField(^(UITextField * _Nonnull textField) {
         textField.placeholder = @"textField";
     }).action(@"OK", ^(UIAlertAction * _Nonnull action) {
@@ -165,19 +165,23 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)actionSheet {
-    [KDotAlert actionSheet].format(@"Sheet", @"This is actionSheet")
+    [KDotAlert actionSheet].format(@"Action Sheet", @"There is actionSheet")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK"];
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
-
-    }).destructive(@"destructiveAction", ^(UIAlertAction * _Nonnull action) {
-
+        [self showMore:@"Cancel"];
+    }).destructive(@"destructive", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"destructive"];
     }).show(self, nil);
 }
 
 - (void)makePreferredAction {
     if (@available(iOS 9.0, *)) {
-        [KDotAlert alert].format(@"MakePreferredAction", @"This is action").action(@"OK", nil).cancel(@"Cancel", nil).destructive(@"destructive", nil).preferred().show(self, nil);
+        [KDotAlert alert].format(@"MakePreferredAction", @"There is action").action(@"OK", nil).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
+            [self showMore:@"Cancel"];
+        }).destructive(@"destructive",  ^(UIAlertAction * _Nonnull action) {
+            [self showMore:@"destructive"];
+        }).preferred().show(self, nil);
     } else {
         // Fallback on earlier versions
     }
@@ -185,12 +189,12 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 
 - (void)useAlertInBlock {
     __block KDotAlert *alert = [KDotAlert alert];
-    alert.format(@"UseAlertInBlock", @"This is useAlertInBlock")
+    alert.format(@"UseAlertInBlock", @"There is use Alert in block")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:[NSString stringWithFormat:@"Alert have %lu Actions", alert.actions.count]];
-    })
-    .cancel(@"cancel", nil)
-    .show(self, nil);
+    }).cancel(@"cancel",  ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"Cancel"];
+    }).show(self, nil);
 }
 
 @end
