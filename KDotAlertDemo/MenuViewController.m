@@ -59,7 +59,9 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
                          @{ TITLEKEY : @"MakePreferredAction",
                             SELECTOR : @"makePreferredAction",
                             },
-
+                         @{ TITLEKEY : @"UseAlertInBlock",
+                            SELECTOR : @"useAlertInBlock",
+                            },
                          ];
     CGRect frame = self.view.bounds;
     frame.size.height = 100;
@@ -153,7 +155,6 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
     }).action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:alert.textFields.firstObject.text];
         [self showMore:@"OK"];
-        alert = nil;
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"Cancel"];
     }).destructive(@"Destructive", ^(UIAlertAction * _Nonnull action) {
@@ -180,6 +181,16 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
     } else {
         // Fallback on earlier versions
     }
+}
+
+- (void)useAlertInBlock {
+    __block KDotAlert *alert = [KDotAlert alert];
+    alert.format(@"UseAlertInBlock", @"This is useAlertInBlock")
+    .action(@"OK", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:[NSString stringWithFormat:@"Alert have %lu Actions", alert.actions.count]];
+    })
+    .cancel(@"cancel", nil)
+    .show(self, nil);
 }
 
 @end

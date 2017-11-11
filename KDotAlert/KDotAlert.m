@@ -12,6 +12,7 @@ double KDotAlertVersionNumber = 0.1;
 const unsigned char KDotAlertVersionString[] = "0.1";
 
 #define SAFE_BLOCK(KDotBlock) if(KDotBlock) KDotBlock
+#define SAFE_ACTION_HANLDER(hanlder) ^(UIAlertAction * _Nonnull action) { SAFE_BLOCK(hanlder)(action); _alertController = nil; }
 
 @interface KDotAlert ()
 @property (nonatomic, strong) UIAlertController *alertController;
@@ -45,30 +46,30 @@ const unsigned char KDotAlertVersionString[] = "0.1";
 }
 
 - (KDotAlertAction)action {
-    return ^(NSString * title, void (^ _Nullable hanlder)(UIAlertAction * _Nonnull action)) {
+    return ^(NSString * title, KDotAlertActionHanlder hanlder) {
         NSAssert(title != nil, @"title cannot be nil.");
-        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:hanlder];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:SAFE_ACTION_HANLDER(hanlder)];
         [_alertController addAction:action];
         return self;
     };
 }
 
 - (KDotAlertAction)cancel {
-    return ^(NSString * title, void (^ _Nullable hanlder)(UIAlertAction * _Nonnull action)) {
+    return ^(NSString * title, KDotAlertActionHanlder hanlder) {
         NSAssert(_isAddCancelAction == NO, @"You can only add cancelAction once!");
         NSAssert(title != nil, @"title cannot be nil.");
         _isAddCancelAction = YES;
         
-        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:hanlder];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:SAFE_ACTION_HANLDER(hanlder)];
         [_alertController addAction:action];
         return self;
     };
 }
 
 - (KDotAlertAction)destructive {
-    return ^(NSString * title, void (^ _Nullable hanlder)(UIAlertAction * _Nonnull action)) {
+    return ^(NSString * title, KDotAlertActionHanlder hanlder) {
         NSAssert(title != nil, @"title cannot be nil.");
-        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDestructive handler:hanlder];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDestructive handler:SAFE_ACTION_HANLDER(hanlder)];
         [_alertController addAction:action];
         return self;
     };
@@ -79,7 +80,7 @@ const unsigned char KDotAlertVersionString[] = "0.1";
 }
 
 // equalto makePreferredAction
-- (KDotAlertPreferred _Nonnull )preferred {
+- (KDotAlertPreferred )preferred {
     return ^(void) {
         if (@available(iOS 9.0, *)) {
             _alertController.preferredAction = _alertController.actions.lastObject;
@@ -92,7 +93,7 @@ const unsigned char KDotAlertVersionString[] = "0.1";
 }
 
 - (KDotAlertTextField)textField {
-    return ^(void (^ _Nullable hanlder)(UITextField * _Nonnull textField)) {
+    return ^(KDotAlertTextFieldHanlder hanlder) {
         NSAssert(_alertController.preferredStyle == UIAlertControllerStyleAlert, @"addTextField only support UIAlertControllerStyleAlert");
         [_alertController addTextFieldWithConfigurationHandler:hanlder];
         return self;
@@ -104,15 +105,15 @@ const unsigned char KDotAlertVersionString[] = "0.1";
 }
 
 - (KDotAlertShow)show {
-    return ^(UIViewController *viewController, id block) {
+    return ^(UIViewController *viewController, KDotAlertShowCompleted completed) {
         NSAssert(viewController != nil, @"viewController connot be nil");
-        [viewController presentViewController:_alertController animated:YES completion:block];
+        [viewController presentViewController:_alertController animated:YES completion:completed];
         return self;
     };
 }
 
 - (void)dealloc {
-    NSLog(@"KDotAlert.dealloc:%@", _alertController.title);
+    NSLog(@"KDotAlert.dealloc && _alertController : %@", _alertController);
 }
 
 @end

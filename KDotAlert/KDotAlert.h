@@ -47,7 +47,7 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface KDotAlert : NSObject
 @property (nonatomic, strong, readonly) KDotAlertTextField  textField;                  // add TextField can only use in alert;
 @property (nonatomic, strong, readonly) NSArray<UITextField *> * _Nullable textFields;  // get all action
 
-@property (nonatomic, strong, readonly) KDotAlertShow show; // show with viewController
+@property (nonatomic, strong, readonly) KDotAlertShow show; // show with viewController 
 
 + (instancetype _Nonnull )alert;
 + (instancetype _Nonnull )actionSheet;
