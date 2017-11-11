@@ -53,6 +53,12 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
                          @{ TITLEKEY : @"TexFeiled",
                             SELECTOR : @"texFeiled",
                             },
+                         @{ TITLEKEY : @"ActionSheet",
+                            SELECTOR : @"actionSheet",
+                            },
+                         @{ TITLEKEY : @"MakePreferredAction",
+                            SELECTOR : @"makePreferredAction",
+                            },
 
                          ];
     CGRect frame = self.view.bounds;
@@ -94,7 +100,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 
 - (void)showMore:(NSString *)string {
     if (string) {
-        _textView.text = [_textView.text stringByAppendingFormat:@"%@ : %@",[self currentTimeString], string];
+        _textView.text = [_textView.text stringByAppendingFormat:@"%@ : %@ \n",[self currentTimeString], string];
         [_textView scrollRangeToVisible:NSMakeRange(_textView.text.length, 1)];
     }
 }
@@ -106,56 +112,74 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)alert{
-    [KDotAlert alert].format(@"Alert", @"There is Alert")
-    .defaultAction(@"OK", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"OK\n"];
+    [KDotAlert alert].format(@"Alert", @"This is Alert")
+    .action(@"OK", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"OK"];
     }).show(self, ^{
-        [self showMore:@"Alert is show\n"];
+        [self showMore:@"Alert is show"];
     });
 }
 
 - (void)cancel {
-    [KDotAlert alert].format(@"Cancel", @"There is Cancel")
+    [KDotAlert alert].format(@"Cancel", @"This is Cancel")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"OK\n"];
+        [self showMore:@"OK"];
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"Cancel\n"];
+        [self showMore:@"Cancel"];
     }).show(self, ^{
-        [self showMore:@"Alert is show\n"];
+        [self showMore:@"Alert is show"];
     });
 }
 
 - (void)destructive {
-    [KDotAlert alert].format(@"Destructive", @"There is Destructive")
+    [KDotAlert alert].format(@"Destructive", @"This is Destructive")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"OK\n"];
+        [self showMore:@"OK"];
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"Cancel\n"];
+        [self showMore:@"Cancel"];
     }).destructive(@"Destructive", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"Destructive\n"];
+        [self showMore:@"Destructive"];
     }).show(self, ^{
-        [self showMore:@"Alert is show\n"];
+        [self showMore:@"Alert is show"];
     });
 }
 
 - (void)texFeiled {
     __block KDotAlert *alert = [KDotAlert alert];
 
-    alert.format(@"TextField", @"There is TextField")
-    .addTextField(^(UITextField * _Nonnull textField) {
+    alert.format(@"TextField", @"This is TextField")
+    .textField(^(UITextField * _Nonnull textField) {
         textField.placeholder = @"textField";
     }).action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:alert.textFields.firstObject.text];
-        [self showMore:@"OK\n"];
+        [self showMore:@"OK"];
         alert = nil;
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"Cancel\n"];
+        [self showMore:@"Cancel"];
     }).destructive(@"Destructive", ^(UIAlertAction * _Nonnull action) {
-        [self showMore:@"Destructive\n"];
+        [self showMore:@"Destructive"];
     }).show(self, ^{
-        [self showMore:@"Alert is show\n"];
+        [self showMore:@"Alert is show"];
     });
 }
 
+- (void)actionSheet {
+    [KDotAlert actionSheet].format(@"Sheet", @"This is actionSheet")
+    .action(@"OK", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"OK"];
+    }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
+
+    }).destructive(@"destructiveAction", ^(UIAlertAction * _Nonnull action) {
+
+    }).show(self, nil);
+}
+
+- (void)makePreferredAction {
+    if (@available(iOS 9.0, *)) {
+        [KDotAlert alert].format(@"MakePreferredAction", @"This is action").action(@"OK", nil).cancel(@"Cancel", nil).destructive(@"destructive", nil).preferred().show(self, nil);
+    } else {
+        // Fallback on earlier versions
+    }
+}
 
 @end

@@ -29,25 +29,25 @@ typedef void(^ _Nullable KDotAlertTextFieldHanlder)(UITextField * _Nonnull textF
 typedef KDotAlert * _Nonnull(^ _Nonnull KDotAlertTextField)(KDotAlertTextFieldHanlder hanlder);
 
 typedef void(^ _Nullable KDotAlertShowCompleted)(void);
-typedef KDotAlert * _Nonnull(^ _Nonnull KDotAlertShowBlock)(UIViewController * _Nonnull viewController, KDotAlertShowCompleted completed);
+typedef KDotAlert * _Nonnull(^ _Nonnull KDotAlertShow)(UIViewController * _Nonnull viewController, KDotAlertShowCompleted completed);
 
 
 
 NS_CLASS_AVAILABLE_IOS(8_0) @interface KDotAlert : NSObject
-@property (nonatomic, strong, readonly, getter=format) KDotAlertFormat formatTitleAndMesage;    // set title
+@property (nonatomic, strong, readonly) KDotAlertFormat format; // format title & message
 
-@property (nonatomic, strong, readonly, getter=action) KDotAlertAction defaultAction;           // add default Action
-@property (nonatomic, strong, readonly, getter=cancel) KDotAlertAction cancelAction;            // add cancel Action
-@property (nonatomic, strong, readonly, getter=destructive) KDotAlertAction  destructiveAction; // add destructive Action
+@property (nonatomic, strong, readonly) KDotAlertAction action; // add default Action
+@property (nonatomic, strong, readonly) KDotAlertAction cancel; // add cancel Action
+@property (nonatomic, strong, readonly) KDotAlertAction destructive; // add destructive Action
 
-// use follow addaction to  make preferredAction
-@property (nonatomic, strong, readonly, getter=preferred) KDotAlertPreferred  makePreferredAction NS_AVAILABLE_IOS(9_0);
-@property (nonatomic, strong, readonly) NSArray<UIAlertAction *> * _Nullable actions;       // get all action  makepreferredAction
+// use follow addaction to make preferredAction, only useful at alert;
+@property (nonatomic, strong, readonly) KDotAlertPreferred preferred NS_AVAILABLE_IOS(9_0);
+@property (nonatomic, strong, readonly) NSArray<UIAlertAction *> * _Nullable actions;   // get all action  makepreferredAction
 
-@property (nonatomic, strong, readonly, getter=textField) KDotAlertTextField  addTextField; // add TextField can only use in alert;
-@property (nonatomic, strong, readonly) NSArray<UITextField *> * _Nullable textFields;      // get all action
+@property (nonatomic, strong, readonly) KDotAlertTextField  textField;                  // add TextField can only use in alert;
+@property (nonatomic, strong, readonly) NSArray<UITextField *> * _Nullable textFields;  // get all action
 
-@property (nonatomic, strong, readonly) KDotAlertShowBlock show;    // show with viewController
+@property (nonatomic, strong, readonly) KDotAlertShow show; // show with viewController
 
 + (instancetype _Nonnull )alert;
 + (instancetype _Nonnull )actionSheet;

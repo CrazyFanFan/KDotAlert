@@ -103,7 +103,7 @@ const unsigned char KDotAlertVersionString[] = "0.1";
     return _alertController.textFields;
 }
 
-- (KDotAlertShowBlock)show {
+- (KDotAlertShow)show {
     return ^(UIViewController *viewController, id block) {
         NSAssert(viewController != nil, @"viewController connot be nil");
         [viewController presentViewController:_alertController animated:YES completion:block];
