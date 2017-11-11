@@ -31,12 +31,11 @@ const unsigned char KDotAlertVersionString[] = "0.1";
 
 - (instancetype)initWithStyle:(UIAlertControllerStyle)style;
 {
-    if (self) {
-        _alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:style];
-    }
+    _alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:style]; 
     return self;
 }
 
+#pragma -mark Base Config
 - (KDotAlertFormat)format {
     return ^(NSString *title, NSString *message) {
         _alertController.title = title;
@@ -45,6 +44,15 @@ const unsigned char KDotAlertVersionString[] = "0.1";
     };
 }
 
+- (NSString *)title {
+    return _alertController.title;
+}
+
+- (NSString *)message {
+    return _alertController.message;
+}
+
+#pragma -mark About Action
 - (KDotAlertAction)action {
     return ^(NSString * title, KDotAlertActionHanlder hanlder) {
         NSAssert(title != nil, @"title cannot be nil.");
@@ -56,7 +64,7 @@ const unsigned char KDotAlertVersionString[] = "0.1";
 
 - (KDotAlertAction)cancel {
     return ^(NSString * title, KDotAlertActionHanlder hanlder) {
-        NSAssert(_isAddCancelAction == NO, @"You can only add cancelAction once!");
+        NSAssert(_isAddCancelAction == NO, @"You can only add cancelAction once.");
         NSAssert(title != nil, @"title cannot be nil.");
         _isAddCancelAction = YES;
         
@@ -79,7 +87,6 @@ const unsigned char KDotAlertVersionString[] = "0.1";
     return _alertController.actions;
 }
 
-// equalto makePreferredAction
 - (KDotAlertPreferred )preferred {
     return ^(void) {
         if (@available(iOS 9.0, *)) {
@@ -92,6 +99,7 @@ const unsigned char KDotAlertVersionString[] = "0.1";
     };
 }
 
+#pragma -mark About TextField
 - (KDotAlertTextField)textField {
     return ^(KDotAlertTextFieldHanlder hanlder) {
         NSAssert(_alertController.preferredStyle == UIAlertControllerStyleAlert, @"addTextField only support UIAlertControllerStyleAlert");
@@ -104,6 +112,8 @@ const unsigned char KDotAlertVersionString[] = "0.1";
     return _alertController.textFields;
 }
 
+
+#pragma -mark Show
 - (KDotAlertShow)show {
     return ^(UIViewController *viewController, KDotAlertShowCompleted completed) {
         NSAssert(viewController != nil, @"viewController connot be nil");
@@ -112,8 +122,10 @@ const unsigned char KDotAlertVersionString[] = "0.1";
     };
 }
 
+#if DEBUG
 - (void)dealloc {
     NSLog(@"KDotAlert.dealloc && _alertController : %@", _alertController);
 }
+#endif
 
 @end
