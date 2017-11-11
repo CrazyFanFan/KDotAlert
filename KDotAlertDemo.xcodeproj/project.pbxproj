@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F32E37B1FB5779B004C5076 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F32E3751FB5779B004C5076 /* MenuViewController.m */; };
 		4F32E3811FB577F9004C5076 /* KDotAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F870F061FB576CC0010FE1D /* KDotAlert.framework */; };
+		4F61DFC51FB70979008BE6D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F61DFC41FB70979008BE6D7 /* README.md */; };
 		4F870EED1FB576980010FE1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F870EEC1FB576980010FE1D /* AppDelegate.m */; };
 		4F870EF51FB576980010FE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F870EF41FB576980010FE1D /* Assets.xcassets */; };
 		4F870EF81FB576980010FE1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F870EF61FB576980010FE1D /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		4F32E3731FB5779B004C5076 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		4F32E3751FB5779B004C5076 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		4F61DFC41FB70979008BE6D7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4F870EE81FB576980010FE1D /* KDotAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDotAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F870EEB1FB576980010FE1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F870EEC1FB576980010FE1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		4F870EDF1FB576980010FE1D = {
 			isa = PBXGroup;
 			children = (
+				4F61DFC41FB70979008BE6D7 /* README.md */,
 				4F870F011FB576CC0010FE1D /* KDotAlert.xcodeproj */,
 				4F870EEA1FB576980010FE1D /* KDotAlertDemo */,
 				4F870EE91FB576980010FE1D /* Products */,
@@ -180,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F61DFC51FB70979008BE6D7 /* README.md in Resources */,
 				4F870EF81FB576980010FE1D /* LaunchScreen.storyboard in Resources */,
 				4F870EF51FB576980010FE1D /* Assets.xcassets in Resources */,
 			);
