@@ -25,7 +25,7 @@
 }
 
 - (void)showAlertView {
-    [KDotAlert alert].title(@"Title").message(@"There is message")
+    [KDotAlert alert].format(@"Title", @"There is message")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK\n"];
     }).show(self, ^{

@@ -50,6 +50,10 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
                          @{ TITLEKEY : @"Destructive",
                             SELECTOR : @"destructive",
                             },
+                         @{ TITLEKEY : @"TexFeiled",
+                            SELECTOR : @"texFeiled",
+                            },
+
                          ];
     CGRect frame = self.view.bounds;
     frame.size.height = 100;
@@ -102,8 +106,8 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)alert{
-    [KDotAlert alert].title(@"Title").message(@"There is message")
-    .action(@"OK", ^(UIAlertAction * _Nonnull action) {
+    [KDotAlert alert].format(@"Alert", @"There is Alert")
+    .defaultAction(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK\n"];
     }).show(self, ^{
         [self showMore:@"Alert is show\n"];
@@ -111,7 +115,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)cancel {
-    [KDotAlert alert].title(@"Title").message(@"There is message")
+    [KDotAlert alert].format(@"Cancel", @"There is Cancel")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK\n"];
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
@@ -122,7 +126,7 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
 }
 
 - (void)destructive {
-    [KDotAlert alert].title(@"Title").message(@"There is message")
+    [KDotAlert alert].format(@"Destructive", @"There is Destructive")
     .action(@"OK", ^(UIAlertAction * _Nonnull action) {
         [self showMore:@"OK\n"];
     }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
@@ -134,49 +138,24 @@ static NSString *CELL_REUSE_UDENTIDIER = @"cell";
     });
 }
 
+- (void)texFeiled {
+    __block KDotAlert *alert = [KDotAlert alert];
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
+    alert.format(@"TextField", @"There is TextField")
+    .addTextField(^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"textField";
+    }).action(@"OK", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:alert.textFields.firstObject.text];
+        [self showMore:@"OK\n"];
+        alert = nil;
+    }).cancel(@"Cancel", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"Cancel\n"];
+    }).destructive(@"Destructive", ^(UIAlertAction * _Nonnull action) {
+        [self showMore:@"Destructive\n"];
+    }).show(self, ^{
+        [self showMore:@"Alert is show\n"];
+    });
+}
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
-
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
