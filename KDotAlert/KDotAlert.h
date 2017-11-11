@@ -36,6 +36,7 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface KDotAlert : NSObject
 @property (nonatomic, strong, readonly) KDotAlertFormat format;         // format title & message
 @property (nonatomic, strong, readonly) NSString * _Nullable title;     // title
 @property (nonatomic, strong, readonly) NSString * _Nullable message;   // message
+@property (nonatomic, assign, readonly) UIAlertControllerStyle preferredStyle;  // The style of the alert controller.
 
 @property (nonatomic, strong, readonly) KDotAlertAction action;     // Attaches an action object to the alert or action sheet. default style;
 @property (nonatomic, strong, readonly) KDotAlertAction cancel;     // ... cancel style;
@@ -51,7 +52,7 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface KDotAlert : NSObject
 @property (nonatomic, strong, readonly) KDotAlertTextField  textField;                  // Adds a text field to an alert;
 @property (nonatomic, strong, readonly) NSArray<UITextField *> * _Nullable textFields;  // The array of text fields displayed by the alert.
 
-@property (nonatomic, strong, readonly) KDotAlertShow show; // show with viewController 
+@property (nonatomic, strong, readonly) KDotAlertShow show; // show with viewController
 
 + (instancetype _Nonnull )alert;
 + (instancetype _Nonnull )actionSheet;

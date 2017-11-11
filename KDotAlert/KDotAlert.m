@@ -52,6 +52,10 @@ const unsigned char KDotAlertVersionString[] = "0.1";
     return _alertController.message;
 }
 
+- (UIAlertControllerStyle)preferredStyle {
+    return _alertController.preferredStyle;
+}
+
 #pragma -mark About Action
 - (KDotAlertAction)action {
     return ^(NSString * title, KDotAlertActionHanlder hanlder) {
